@@ -11,8 +11,5 @@ public class EX9 {
 		double sisok = totalkm / hr;
 		
 		System.out.println(sisok + " km/h");
-		
-		
 	}
-
 }
