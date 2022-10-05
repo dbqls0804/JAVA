@@ -17,7 +17,7 @@ public class JsonSimple {
 
 	public static void main(String[] args) throws IOException, ParseException {
 		StringBuilder urlBuilder = new StringBuilder(
-				"http://apis.data.go.kr/6260000/BusanAnimalHospService"); /* URL Base 주소 */
+				"https://api.odcloud.kr/api/15077586/v1/centers"); /* URL Base 주소 */
 		urlBuilder.append("?serviceKey=" + "o+Nm39GgOgH3psOntrqZrjCkZhEy7z+9sD9hM7JZXPpS0IxFRIayGas4jBbXUpciZr5tMVGv2ny+G8QD5ibL8A=="); /* Service Key */
 		urlBuilder
 				.append("&page=1"); /* 페이지번호 */
@@ -45,7 +45,7 @@ public class JsonSimple {
 		JSONParser jsonParser = new JSONParser(); //JSON 변환 객체 생성
 		JSONObject jsonObject = (JSONObject)jsonParser.parse(sb.toString());
 		JSONArray arr = (JSONArray)jsonObject.get("data");
-		//System.out.println(arr);
+		System.out.println(arr);
 		
 		for(Object one : arr) {
 			JSONObject ob = (JSONObject)one;

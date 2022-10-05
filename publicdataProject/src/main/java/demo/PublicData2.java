@@ -11,7 +11,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class PublicData {
+public class PublicData2 {
 
 	public static void main(String[] args) throws IOException, ParseException {
 		StringBuilder urlBuilder = new StringBuilder(
@@ -28,7 +28,7 @@ public class PublicData {
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET"); // 요청메소드 get
 		conn.setRequestProperty("Content-type", "application/json"); // 데이터 타입
-		System.out.println("Response code: " + conn.getResponseCode());
+		//System.out.println("Response code: " + conn.getResponseCode());
 		BufferedReader rd;
 
 		if (conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
@@ -50,7 +50,7 @@ public class PublicData {
 		JSONObject ob1 = (JSONObject) ob0.get("body");
 		JSONObject ob2 = (JSONObject) ob1.get("items");
 		JSONArray arr = (JSONArray) ob2.get("item");
-		System.out.println(arr);
+		//System.out.println(arr);
 
 		for (Object one : arr) {
 			JSONObject ob = (JSONObject) one;
